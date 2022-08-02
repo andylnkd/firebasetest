@@ -33,7 +33,7 @@ export default function BasicTextFields({ title, setPassword, setEmail, handleAc
                 />
             </Box>
 
-            <Button title={title} />
+            <Button title={title} handleAction={handleAction} />
         </div>
     );
 }

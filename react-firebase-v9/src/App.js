@@ -13,11 +13,12 @@ import {
 function App() {
 
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('')
+  const [password, setPassword] = useState('');
   
   const handleAction = (id) => {
     const authentication = getAuth();
     if (id === 2) {
+      console.log("I AM HERE!!!!");
       createUserWithEmailAndPassword(authentication, email, password)
         .then((response) => {
           console.log(response)
@@ -45,7 +46,7 @@ function App() {
               path='/register'
               element={
                 <Form
-                  title="Register"
+                  title="Register Now"
                   setEmail={setEmail}
                   setPassword={setPassword}
                   handleAction={() => handleAction(2)}
